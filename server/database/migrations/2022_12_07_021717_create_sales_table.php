@@ -21,7 +21,6 @@ return new class extends Migration
             $table->integer('id_products')->unsigned();
             $table->foreign('id_products')->references('id')->on('products')->onDelete('cascade');
             $table->decimal('total', 11, 2);
-
             $table->timestamps();
         });
     }

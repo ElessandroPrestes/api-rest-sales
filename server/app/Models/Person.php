@@ -12,7 +12,7 @@ class Person extends Model
     
     protected $table = "persons";
 
-    public $timestamps = false;
+    public $timestamps = true;
 
     protected $fillable = ['name', 'cpf', 'cep', 'public_area', 'number', 'district', 'complement', 'city', 'birth_date'];
 

@@ -15,15 +15,16 @@ return new class extends Migration
     {
         Schema::create('persons', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name')->nullable();
+            $table->string('name');
             $table->char('cpf', 11)->unique();
-            $table->char('cep', 10)->nullable();
+            $table->char('cep', 10);
             $table->string('public_area');
             $table->char('number');
             $table->string('district');
-            $table->string('complement');
+            $table->string('complement')->nullable();
             $table->string('city');
-            $table->date('birth_date')->nulllable();
+            $table->date('birth_date');
+            $table->timestamps();
         });
     }
 
